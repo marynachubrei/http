@@ -1,0 +1,18 @@
+mat-table{
+  width:100%
+}
+
+button[value="Add"]{
+  margin-right: 15px;
+}
+mat-cell:first-of-type,mat-header-cell:first-of-type,mat-footer-cell:first-of-type{
+  margin-right: 65px;
+}
+mat-cell:nth-child(3),mat-header-cell:nth-child(3),mat-footer-cell:nth-child(3){
+  margin-right: 30px;
+  margin-left: -70px;
+}
+mat-cell:last-of-type,mat-header-cell:last-of-type,mat-footer-cell:last-of-type{
+  margin-left: 70px;
+  margin-right: -100px;
+}

@@ -1,0 +1,93 @@
+<mat-toolbar>
+  <span class="form-title">{{service.form.controls['$key'].value?"Modify Album":"New Album"}}</span>
+</mat-toolbar>
+<form [formGroup]="service.form" class="normal-form" (submit)="onSubmit(service.form.value)">
+  <mat-grid-list cols="1" rowHeigth="300px">
+    <mat-grid-tile class="main">
+      <div class="controles-container">
+        <input type="hidden" formControlName="$key">
+        <mat-form-field appearance="fill" >
+          <mat-label>Name</mat-label>
+          <input formControlName="name" matInput>
+          <mat-error *ngIf="service.form.controls['name'].errors?.required">This field is required!</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill" >
+          <mat-label>Band</mat-label>
+          <input formControlName="band" matInput>
+          <mat-error *ngIf="service.form.controls['band'].errors?.required">This field is required!</mat-error>
+        </mat-form-field>
+        <!-- <mat-form-field>
+          <mat-label>Labels</mat-label>
+          <input formControlName="label" matInput>
+        </mat-form-field> -->
+        <!-- <mat-form-field>
+          <mat-label>Genres</mat-label>
+          <input formControlName="genre" matInput>
+        </mat-form-field> -->
+
+        <mat-form-field class="chip-list">
+          <mat-label>Genres</mat-label>
+          <mat-chip-list #chipListGenre aria-label="Genre selection">
+            <mat-chip *ngFor="let genre of genres" [selectable]="selectable"
+                      [removable]="removable"  (removed)="remove('genre',genre)">
+                      {{genre.name}}
+                      <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+            </mat-chip>
+            <input placeholder="New genre..."
+                  formControlName="genre"
+                  [matChipInputFor]="chipListGenre"
+                  [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                  [matChipInputAddOnBlur]="addOnBlur"
+                  (matChipInputTokenEnd)="add($event)">
+          </mat-chip-list>
+        </mat-form-field>
+        <mat-form-field class="chip-list">
+          <mat-label>Label</mat-label>
+          <mat-chip-list #chipListLabel aria-label="Label selection">
+            <mat-chip *ngFor="let label of labels" [selectable]="selectable"
+                      [removable]="removable"(removed)="remove('label',label)">
+                      {{label.name}}
+              <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+            </mat-chip>
+            <input placeholder="Add label..."
+                  formControlName="label"
+                  [matChipInputFor]="chipListLabel"
+                  [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                  [matChipInputAddOnBlur]="addOnBlur"
+                  (matChipInputTokenEnd)="add($event)">
+          </mat-chip-list>
+        </mat-form-field>
+        <mat-form-field class="example-chip-list">
+          <mat-label>Producer</mat-label>
+          <mat-chip-list #chipListProducer aria-label="Producer selection">
+            <mat-chip *ngFor="let producer of producers" [selectable]="selectable"
+                     [removable]="removable" (removed)="remove('producer',producer)">
+              {{producer.name}}
+              <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+            </mat-chip>
+            <input placeholder="Add prodecer..."
+              formControlName="producer"
+                   [matChipInputFor]="chipListProducer"
+                   [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                   [matChipInputAddOnBlur]="addOnBlur"
+                   (matChipInputTokenEnd)="add($event)">
+          </mat-chip-list>
+        </mat-form-field>
+        <!-- <mat-form-field>
+          <mat-label>Producers</mat-label>
+          <input formControlName="producer" matInput>
+          <mat-error *ngIf="service.form.controls['producer'].errors?.required">This field is required</mat-error>
+        </mat-form-field> -->
+        <!-- <mat-form-field>
+          <mat-label>Release Date</mat-label>
+          <input formControlName="releaseDate" matInput>
+        </mat-form-field> -->
+      </div>
+
+      <div class="button-row">
+        <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid">Ok</button>
+        <button mat-raised-button name="cancel" (click)="onClose()">Cancel</button>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "http-29a3e": {
+      "hosting": {
+        "angular-service-training": [
+          "http-29a3e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angulat-http-dd0ef"
+  }
+}

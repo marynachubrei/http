@@ -1,0 +1,76 @@
+[debug] [2021-06-15T19:24:10.822Z] ----------------------------------------------------------------------
+[debug] [2021-06-15T19:24:10.825Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Viorica\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-06-15T19:24:10.826Z] CLI Version:   9.12.1
+[debug] [2021-06-15T19:24:10.827Z] Platform:      win32
+[debug] [2021-06-15T19:24:10.827Z] Node Version:  v12.20.1
+[debug] [2021-06-15T19:24:10.830Z] Time:          Tue Jun 15 2021 22:24:10 GMT+0300 (GMT+03:00)
+[debug] [2021-06-15T19:24:10.830Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-15T19:24:10.870Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-15T19:24:10.871Z] > authorizing via signed-in user (chubrei.maryna@chnu.edu.ua)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Viorica\Desktop\Maryna\wildbananastiia.github.io
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using angulat-http-dd0ef. 
+[debug] [2021-06-15T19:24:39.701Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/angulat-http-dd0ef [none]
+[debug] [2021-06-15T19:24:40.044Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/angulat-http-dd0ef 200
+[debug] [2021-06-15T19:24:40.044Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/angulat-http-dd0ef {"projectId":"angulat-http-dd0ef","projectNumber":"12088932294","displayName":"angulat-http","name":"projects/angulat-http-dd0ef","resources":{"hostingSite":"angulat-http-dd0ef"},"state":"ACTIVE"}
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2021-06-15T19:24:40.049Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-06-15T19:24:40.049Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-15T19:24:40.236Z] <<< HTTP RESPONSE 200 {"date":"Tue, 15 Jun 2021 19:24:38 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-15T19:24:40.262Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/angulat-http-dd0ef/services/firebasedatabase.googleapis.com  
+ 
+[debug] [2021-06-15T19:24:41.325Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 15 Jun 2021 19:24:39 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] !  database: missing required API firebasedatabase.googleapis.com. Enabling now... 
+[debug] [2021-06-15T19:24:41.329Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/angulat-http-dd0ef/services/firebasedatabase.googleapis.com:enable  
+ 
+[debug] [2021-06-15T19:24:42.813Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 15 Jun 2021 19:24:40 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-15T19:24:52.815Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/angulat-http-dd0ef/services/firebasedatabase.googleapis.com  
+ 
+[debug] [2021-06-15T19:24:53.770Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 15 Jun 2021 19:24:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2021-06-15T19:24:53.782Z] > refreshing access token with scopes: []
+[debug] [2021-06-15T19:24:53.783Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-15T19:24:53.960Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Tue, 15 Jun 2021 19:24:51 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-15T19:24:53.984Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/angulat-http-dd0ef [none]
+[debug] [2021-06-15T19:24:54.266Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/angulat-http-dd0ef 200
+[debug] [2021-06-15T19:24:54.266Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/angulat-http-dd0ef {"projectId":"angulat-http-dd0ef","projectNumber":"12088932294","displayName":"angulat-http","name":"projects/angulat-http-dd0ef","resources":{"hostingSite":"angulat-http-dd0ef"},"state":"ACTIVE"}
+[debug] [2021-06-15T19:25:07.819Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-06-15T19:25:07.819Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-15T19:25:07.999Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Tue, 15 Jun 2021 19:25:05 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-15T19:25:08.029Z] >>> HTTP REQUEST POST https://firebasedatabase.googleapis.com/v1beta/projects/angulat-http-dd0ef/locations/europe-west1/instances?databaseId=angulat-http-dd0ef-default-rtdb&validateOnly=true  
+ {"type":"default_database"}
+[debug] [2021-06-15T19:25:08.918Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 15 Jun 2021 19:25:06 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-15T19:25:08.924Z] >>> HTTP REQUEST POST https://firebasedatabase.googleapis.com/v1beta/projects/angulat-http-dd0ef/locations/europe-west1/instances?databaseId=angulat-http-dd0ef-default-rtdb  
+ {"type":"default_database"}
+[debug] [2021-06-15T19:25:10.758Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 15 Jun 2021 19:25:08 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
